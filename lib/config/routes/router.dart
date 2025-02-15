@@ -8,7 +8,10 @@ import 'package:e_commerce_app/screen/auth/splash_screen.dart';
 part 'router.gr.dart';
 
 @AutoRouterConfig()
-class AppRouter  {
+class AppRouter extends RootStackRouter {
+  AppRouter() : super();
+  
+  @override
   List<AutoRoute> get routes => [
         AutoRoute(
           page: SplashRoute.page,
@@ -32,6 +35,4 @@ class AppRouter  {
           path: '/homepage',
         )
       ];
-
-  config() {}
 }

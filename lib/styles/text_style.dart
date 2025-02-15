@@ -53,7 +53,7 @@ class CustomTextStyle{
 
   static TextStyle bodyText(BuildContext context){
     
-    ScreenUtils.isMobile(context) ? fontSize = 16 : ScreenUtils.isTablet(context) ? fontSize = 18 : ScreenUtils.isDesktop(context) ? fontSize = 24 : fontSize = 16;
+    ScreenUtils.isMobile(context) ? fontSize = 16 : ScreenUtils.isTablet(context) ? fontSize = 18 : ScreenUtils.isDesktop(context) ? fontSize = 18 : fontSize = 16;
 
     return TextStyle(
       fontSize: fontSize,
@@ -68,6 +68,25 @@ class CustomTextStyle{
     return TextStyle(
       fontSize: fontSize,
       fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle buttonText(BuildContext context){
+    
+    ScreenUtils.isMobile(context) ? fontSize = 20 : ScreenUtils.isTablet(context) ? fontSize = 18 : ScreenUtils.isDesktop(context) ? fontSize = 20 : fontSize = 16;
+
+    return TextStyle(
+      fontSize: fontSize,
+      fontWeight: FontWeight.w600,
+    );
+  }
+  static TextStyle splastTitle(BuildContext context){
+
+    ScreenUtils.isMobile(context) ? fontSize = 30 : ScreenUtils.isTablet(context) ? fontSize = 40 : ScreenUtils.isDesktop(context) ? fontSize = 46 : fontSize = 30;
+
+    return TextStyle(
+      fontSize: fontSize,
+      fontWeight: FontWeight.w600
     );
   }
 }

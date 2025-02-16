@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -13,10 +14,7 @@ part of 'router.dart';
 /// [ForgotPassScreen]
 class ForgotPassRoute extends PageRouteInfo<void> {
   const ForgotPassRoute({List<PageRouteInfo>? children})
-      : super(
-          ForgotPassRoute.name,
-          initialChildren: children,
-        );
+    : super(ForgotPassRoute.name, initialChildren: children);
 
   static const String name = 'ForgotPassRoute';
 
@@ -30,12 +28,9 @@ class ForgotPassRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [HomePageScreen]
-class HomeRouteRoute extends PageRouteInfo<void> {
-  const HomeRouteRoute({List<PageRouteInfo>? children})
-      : super(
-          HomeRouteRoute.name,
-          initialChildren: children,
-        );
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute({List<PageRouteInfo>? children})
+    : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRouteRoute';
 
@@ -51,17 +46,14 @@ class HomeRouteRoute extends PageRouteInfo<void> {
 /// [LoginScreen]
 class LoginRoute extends PageRouteInfo<void> {
   const LoginRoute({List<PageRouteInfo>? children})
-      : super(
-          LoginRoute.name,
-          initialChildren: children,
-        );
+    : super(LoginRoute.name, initialChildren: children);
 
   static const String name = 'LoginRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const LoginScreen();
+      return LoginScreen();
     },
   );
 }
@@ -70,10 +62,7 @@ class LoginRoute extends PageRouteInfo<void> {
 /// [RegisterScreen]
 class RegisterRoute extends PageRouteInfo<void> {
   const RegisterRoute({List<PageRouteInfo>? children})
-      : super(
-          RegisterRoute.name,
-          initialChildren: children,
-        );
+    : super(RegisterRoute.name, initialChildren: children);
 
   static const String name = 'RegisterRoute';
 
@@ -89,10 +78,7 @@ class RegisterRoute extends PageRouteInfo<void> {
 /// [SplashScreen]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute({List<PageRouteInfo>? children})
-      : super(
-          SplashRoute.name,
-          initialChildren: children,
-        );
+    : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 

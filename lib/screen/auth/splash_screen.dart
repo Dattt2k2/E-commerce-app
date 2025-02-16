@@ -2,40 +2,42 @@ import 'package:auto_route/auto_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce_app/config/theme/theme.dart';
+import 'package:e_commerce_app/screen/auth/log_in.dart';
 import 'package:e_commerce_app/styles/custom_button.dart';
 import 'package:e_commerce_app/styles/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:e_commerce_app/config/routes/router.dart';
 
 
 @RoutePage()
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+    const SplashScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    final List<String> images = [
-      'assets/image/carousel1.png',
-      'assets/image/carousel2.png',
-    ];
+    @override
+    Widget build(BuildContext context) {
+      final List<String> images = [
+        'assets/image/carousel1.png',
+        'assets/image/carousel2.png',
+      ];
 
-    final responsive = ResponsiveBreakpoints.of(context);
-    final isMobile = responsive.isMobile;
-    final isTablet = responsive.isTablet;
-    final isDesktop = responsive.isDesktop;
+      final responsive = ResponsiveBreakpoints.of(context);
+      final isMobile = responsive.isMobile;
+      final isTablet = responsive.isTablet;
+      final isDesktop = responsive.isDesktop;
 
 
 
-    return Scaffold(
-      body: SafeArea(  // Thêm SafeArea để tránh overflow
-        child: isDesktop 
-          ? _buildDeskopLayout(context, images)
-          : isMobile
-            ? _buildMobileLayout(context, images)  // Thêm context parameter
-            : _buildTabletLayout(context, images), // Thêm context parameter
-      ),
-    );
-  }
+      return Scaffold(
+        body: SafeArea(  // Thêm SafeArea để tránh overflow
+          child: isDesktop 
+            ? _buildDeskopLayout(context, images)
+            : isMobile
+              ? _buildMobileLayout(context, images)  // Thêm context parameter
+              : _buildTabletLayout(context, images), // Thêm context parameter
+        ),
+      );
+    }
 } 
 
 Widget _buildDeskopLayout(BuildContext context, List<String> images) {
@@ -80,7 +82,7 @@ Widget _buildDeskopLayout(BuildContext context, List<String> images) {
                     Expanded(
                       child: CustomButton(
                         text: 'Log in',
-                        onpressed: () { print('ahahaha'); },
+                        onpressed: () => context.router.push(const LoginRoute()),
                         backgroundColor: Colors.blue.shade100,
                         textColor: Colors.black87,
                       ),
@@ -89,7 +91,7 @@ Widget _buildDeskopLayout(BuildContext context, List<String> images) {
                     Expanded(
                       child: CustomButton(
                         text: 'Sign up',
-                        onpressed: () { print('ahahaha'); },
+                        onpressed: () => context.router.push(const RegisterRoute()),
                         backgroundColor: Colors.blue,
                         textColor: Colors.white,
                       ),
@@ -138,14 +140,16 @@ Widget _buildMobileLayout(BuildContext context, List<String> images){
               SizedBox(height: 30,),
               CustomButton(
               text: 'Log in',
-              onpressed: () { print('ahahaha'); },
+              onpressed: () { 
+                context.router.push(const LoginRoute());  
+               },
               backgroundColor: Colors.blue.shade100,
               textColor: Colors.black87,
               ),
               const SizedBox(height: 20),
               CustomButton(
                 text: 'Sign up',
-                onpressed: () { print('ahahaha'); },
+                onpressed: () => context.router.push(const RegisterRoute()),
                 backgroundColor: Colors.blue,
                 textColor: Colors.white,
               ),

@@ -8,7 +8,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:e_commerce_app/config/routes/router.dart';
 
 class LoginForm extends StatefulWidget {
-  const LoginForm({Key? key}) : super(key: key);
+  const LoginForm({super.key});
 
   @override
   _LoginFormState createState() => _LoginFormState();
@@ -24,12 +24,12 @@ class _LoginFormState extends State<LoginForm> {
     final responsive = ResponsiveBreakpoints.of(context);
 
     // Kiểm tra các loại thiết bị
-    final isMobile = responsive.isMobile;
+    // final isMobile = responsive.isMobile;
     final isTablet = responsive.isTablet;
     final isDesktop = responsive.isDesktop;
 
     return Scaffold(
-      appBar: AppBar(title: Text('Đăng nhập')),
+      appBar: AppBar(title: const Text('Đăng nhập')),
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is Authenticated) {
@@ -67,28 +67,28 @@ class _LoginFormState extends State<LoginForm> {
       children: [
         TextField(
           controller: _emailController,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Email',
             hintText: 'Nhập email của bạn',
             border: OutlineInputBorder(),
           ),
           keyboardType: TextInputType.emailAddress,
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         TextField(
           controller: _passwordController,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Mật khẩu',
             hintText: 'Nhập mật khẩu của bạn',
             border: OutlineInputBorder(),
           ),
           obscureText: true,
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         BlocBuilder<AuthBloc, AuthState>(
           builder: (context, state) {
             if (state is AuthLoading) {
-              return CircularProgressIndicator(); // Hiển thị loader khi đang đăng nhập
+              return const CircularProgressIndicator(); // Hiển thị loader khi đang đăng nhập
             }
             return ElevatedButton(
               onPressed: () {
@@ -100,7 +100,7 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 );
               },
-              child: Text('Đăng nhập'),
+              child: const Text('Đăng nhập'),
             );
           },
         ),
@@ -114,28 +114,28 @@ class _LoginFormState extends State<LoginForm> {
       children: [
         TextField(
           controller: _emailController,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Email',
             hintText: 'Nhập email của bạn',
             border: OutlineInputBorder(),
           ),
           keyboardType: TextInputType.emailAddress,
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         TextField(
           controller: _passwordController,
-          decoration: InputDecoration(
+          decoration: const  InputDecoration(
             labelText: 'Mật khẩu',
             hintText: 'Nhập mật khẩu của bạn',
             border: OutlineInputBorder(),
           ),
           obscureText: true,
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         BlocBuilder<AuthBloc, AuthState>(
           builder: (context, state) {
             if (state is AuthLoading) {
-              return CircularProgressIndicator(); // Hiển thị loader khi đang đăng nhập
+              return const  CircularProgressIndicator(); // Hiển thị loader khi đang đăng nhập
             }
             return ElevatedButton(
               onPressed: () {

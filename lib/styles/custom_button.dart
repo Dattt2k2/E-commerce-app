@@ -25,7 +25,7 @@ class CustomButton extends StatelessWidget{
     return LayoutBuilder(builder: (context, constraints){
       final isMobile = ResponsiveBreakpoints.of(context).isMobile;
       final isTablet = ResponsiveBreakpoints.of(context).isTablet;
-      final isDesktop = ResponsiveBreakpoints.of(context).isDesktop;
+      // final isDesktop = ResponsiveBreakpoints.of(context).isDesktop;
       
 
       double buttonWidht;
@@ -47,17 +47,17 @@ class CustomButton extends StatelessWidget{
         height: buttonHeight,
         child: ElevatedButton(
           onPressed: onpressed,
-          child: Text(
-            text,
-            style: CustomTextStyle.buttonText(context).copyWith(
-              color: textColor
-            )
-          ),
           style: ElevatedButton.styleFrom(
             backgroundColor: backgroundColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
+          ),
+          child: Text(
+            text,
+            style: CustomTextStyle.buttonText(context).copyWith(
+              color: textColor
+            )
           )
         ),
       );

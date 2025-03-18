@@ -28,8 +28,8 @@ class ResponsiveHelper{
         return tablet;
       case DeviceScreenType.web:
         return web;
-      default:
-        return mobile;
+      // default:
+      //   return mobile;
     }
   }
 
@@ -41,8 +41,8 @@ class ResponsiveHelper{
         return tablet;
       case DeviceScreenType.web:
         return web;
-      default:
-        return mobile;
+      // default:
+      //   return mobile;
     }
   }
 }

@@ -113,8 +113,8 @@ class _FlipAuthCardState extends State<FlipAuthCard> with SingleTickerProviderSt
         return AuthCardSide.login;
       case AuthCardSide.forgotPassword:
         return AuthCardSide.login;
-      default:
-        return AuthCardSide.login;
+      // default:
+      //   return AuthCardSide.login;
     }
   }
 

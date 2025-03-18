@@ -1,14 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dartz/dartz.dart' as dartz;
-import 'package:e_commerce_app/config/theme/theme.dart';
+// import 'package:dartz/dartz.dart' as dartz;
+// import 'package:e_commerce_app/config/theme/theme.dart';
 import 'package:e_commerce_app/form/flip_card.dart';
-import 'package:e_commerce_app/screen/auth/log_in.dart';
-import 'package:e_commerce_app/styles/custom_button.dart';
-import 'package:e_commerce_app/styles/text_style.dart';
+// import 'package:e_commerce_app/screen/auth/log_in.dart';
+// import 'package:e_commerce_app/styles/custom_button.dart';
+// import 'package:e_commerce_app/styles/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:e_commerce_app/config/routes/router.dart';
+// import 'package:e_commerce_app/config/routes/router.dart';
 
 @RoutePage()
 class SplashScreen extends StatefulWidget {
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     final responsive = ResponsiveBreakpoints.of(context);
     final isMobile = responsive.isMobile;
-    final isTablet = responsive.isTablet;
+    // final isTablet = responsive.isTablet;
     final isDesktop = responsive.isDesktop;
 
     return Scaffold(
